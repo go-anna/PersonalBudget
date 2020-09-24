@@ -1,0 +1,160 @@
+# depslib dependency file v1.0
+1600900668 source:c:\users\joanna\desktop\c++\personal budget\user.cpp
+	"User.h"
+
+1599511003 c:\users\joanna\desktop\c++\personal budget\user.h
+	<iostream>
+
+1600904246 source:c:\users\joanna\desktop\c++\personal budget\userfile.cpp
+	"userFile.h"
+
+1600989652 source:c:\users\joanna\desktop\c++\personal budget\usermanager.cpp
+	"UserManager.h"
+
+1600987798 source:c:\users\joanna\desktop\c++\personal budget\main.cpp
+	<iostream>
+	"PersonalBudget.h"
+
+1303070812 source:c:\users\joanna\desktop\c++\personal budget\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1303070812 c:\users\joanna\desktop\c++\personal budget\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1600989233 source:c:\users\joanna\desktop\c++\personal budget\auxiliarymethods.cpp
+	"AuxiliaryMethods.h"
+
+1600989305 c:\users\joanna\desktop\c++\personal budget\auxiliarymethods.h
+	<iostream>
+	<windows.h>
+	<sstream>
+	<fstream>
+	<algorithm>
+
+1600125292 source:c:\users\joanna\desktop\c++\personal budget\xmlfile.cpp
+	"XmlFile.h"
+
+1600125414 c:\users\joanna\desktop\c++\personal budget\xmlfile.h
+	<iostream>
+
+1600125471 c:\users\joanna\desktop\c++\personal budget\userfile.h
+	<iostream>
+	<vector>
+	"User.h"
+	"XmlFile.h"
+	"AuxiliaryMethods.h"
+	"Markup.h"
+
+1600987798 source:c:\users\joanna\desktop\c++\personal budget\personalbudget.cpp
+	"PersonalBudget.h"
+
+1600987849 c:\users\joanna\desktop\c++\personal budget\personalbudget.h
+	<iostream>
+	"UserManager.h"
+	"AuxiliaryMethods.h"
+	"OperationHistoryManager.h"
+
+1600900970 c:\users\joanna\desktop\c++\personal budget\usermanager.h
+	<iostream>
+	<vector>
+	<windows.h>
+	"UserFile.h"
+	"User.h"
+	"AuxiliaryMethods.h"
+
+1600970362 source:c:\users\joanna\desktop\c++\personal budget\expence.cpp
+	"Expense.h"
+
+1600970362 c:\users\joanna\desktop\c++\personal budget\expence.h
+	<iostream>
+	"OperationHistory.h"
+
+1600905386 c:\users\joanna\desktop\c++\personal budget\operationhistory.h
+	<iostream>
+
+1600899871 source:c:\users\joanna\desktop\c++\personal budget\income.cpp
+	"Income.h"
+
+1600899871 c:\users\joanna\desktop\c++\personal budget\income.h
+	<iostream>
+	"OperationHistory.h"
+
+1600988493 source:c:\users\joanna\desktop\c++\personal budget\datemanager.cpp
+	"DateManager.h"
+
+1600988475 c:\users\joanna\desktop\c++\personal budget\datemanager.h
+	<iostream>
+	<time.h>
+	<string>
+	"AuxiliaryMethods.h"
+
+1600905175 source:c:\users\joanna\desktop\c++\personal budget\expencefile.cpp
+	"ExpenceFile.h"
+
+1600969963 c:\users\joanna\desktop\c++\personal budget\expencefile.h
+	<iostream>
+	<vector>
+	"Expence.h"
+	"XmlFile.h"
+	"Markup.h"
+	"DateManager.h"
+	"AuxiliaryMethods.h"
+
+1600905175 source:c:\users\joanna\desktop\c++\personal budget\operationhistory.cpp
+	"OperationHistory.h"
+
+1600988687 source:c:\users\joanna\desktop\c++\personal budget\incomefile.cpp
+	"IncomeFile.h"
+
+1600988687 c:\users\joanna\desktop\c++\personal budget\incomefile.h
+	<iostream>
+	<vector>
+	"Income.h"
+	"XmlFile.h"
+	"Markup.h"
+	"DateManager.h"
+	"AuxiliaryMethods.h"
+
+1600990168 c:\users\joanna\desktop\c++\personal budget\operationhistorymanager.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<iomanip>
+	<algorithm>
+	"ExpenseFile.h"
+	"IncomeFile.h"
+	"Income.h"
+	"Expense.h"
+	"AuxiliaryMethods.h"
+	"DateManager.h"
+
+1600988281 source:c:\users\joanna\desktop\c++\personal budget\operationhistorymanager.cpp
+	"OperationHistoryManager.h"
+
+1600988615 c:\users\joanna\desktop\c++\personal budget\expensefile.h
+	<iostream>
+	<vector>
+	"Expense.h"
+	"XmlFile.h"
+	"Markup.h"
+	"DateManager.h"
+	"AuxiliaryMethods.h"
+
+1600970837 c:\users\joanna\desktop\c++\personal budget\expense.h
+	<iostream>
+	"OperationHistory.h"
+
+1600970837 source:c:\users\joanna\desktop\c++\personal budget\expense.cpp
+	"Expense.h"
+
+1600988615 source:c:\users\joanna\desktop\c++\personal budget\expensefile.cpp
+	"ExpenseFile.h"
+
