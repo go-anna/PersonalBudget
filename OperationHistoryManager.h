@@ -34,7 +34,7 @@ class OperationHistoryManager
     void displaySearchIncomesAndSum(int numberOfIncomes, double incomesSum);
     void displaySearchExpensesAndSum(int numberOfExpenses, double incomesSum, double expensesSum);
     char incomeMenu();
-    char expenceMenu();
+    char expenseMenu();
 
 public:
     OperationHistoryManager(string nameOfFileWithIncomes, string nameOfFileWithExpenses, int idOfLoggedUser)
@@ -48,7 +48,6 @@ public:
     void showCurrentMonthBalance();
     void showPreviousMonthBalance();
     void showSelectedPeriodBalance();
-
 };
 
 #endif

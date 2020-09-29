@@ -17,8 +17,6 @@ string DateManager::getCurrentDate()
     return date;
 }
 
-
-
 bool DateManager::checkIfDateIsCorrect(string date)
 {
     for(int i = 0; i <= date.length()-1; i++)
@@ -58,7 +56,7 @@ bool DateManager::checkIfDateIsCorrect(string date)
         }
         else
         {
-            cout << "bad date values. Enter the date again!" << endl;
+            cout << "Bad date values. Enter the date again!" << endl;
             return false;
         }
 

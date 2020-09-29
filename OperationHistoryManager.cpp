@@ -17,7 +17,7 @@ int OperationHistoryManager::addIncome()
         case '1':
             income = setIncomeDataOfToday();
             incomes.push_back(income);
-            if (incomeFile.addIncomeToFile(income))
+            if (incomeFile.saveIncomeToFile(income))
                 cout << "The new income has been added" << endl;
             else
                 cout << "Error. It was not possible to add a new income to the file." << endl;
@@ -26,7 +26,7 @@ int OperationHistoryManager::addIncome()
         case '2':
             income = setIncomeDataFromAnotherDay();
             incomes.push_back(income);
-            if (incomeFile.addIncomeToFile(income))
+            if (incomeFile.saveIncomeToFile(income))
                 cout << "The new income has been added" << endl;
             else
                 cout << "Error. It was not possible to add a new income to the file." << endl;
@@ -116,14 +116,14 @@ int OperationHistoryManager::addExpense()
     {
         system("cls");
         cout << " >>> ADDING NEW EXPENSE <<<" << endl << endl;
-        choice = expenceMenu();
+        choice = expenseMenu();
 
         switch (choice)
         {
         case '1':
             expense = setExpenseDataOfToday();
             expenses.push_back(expense);
-            if (expenseFile.addExpenseToFile(expense))
+            if (expenseFile.saveExpenseToFile(expense))
                 cout << "The new expense has been added" << endl;
             else
                 cout << "Error. It was not possible to add a new expense to the file." << endl;
@@ -132,7 +132,7 @@ int OperationHistoryManager::addExpense()
         case '2':
             expense = setExpenseDataFromAnotherDay();
             expenses.push_back(expense);
-            if (expenseFile.addExpenseToFile(expense))
+            if (expenseFile.saveExpenseToFile(expense))
                 cout << "The new expense has been added" << endl;
             else
                 cout << "Error. It was not possible to add a new expense to the file." << endl;
@@ -213,6 +213,51 @@ Expense OperationHistoryManager::setExpenseDataFromAnotherDay()
     expense.setAmount(amountDouble);
 
     return expense;
+}
+
+char OperationHistoryManager::incomeMenu()
+{
+    char choice;
+
+    cout << "---------------------------" << endl;
+    cout << "1 - Today's income" << endl;
+    cout << "2 - Income from another day" << endl;
+    cout << "3 - Exit " << endl;
+    cout << endl << "Your choice: ";
+    choice = AuxiliaryMethods::loadCharacter();
+
+    return choice;
+}
+
+char OperationHistoryManager::expenseMenu()
+{
+    char choice;
+
+    cout << "---------------------------" << endl;
+    cout << "1 - Today's expense" << endl;
+    cout << "2 - Expense from another day" << endl;
+    cout << "3 - Exit " << endl;
+    cout << endl << "Your choice: ";
+    choice = AuxiliaryMethods::loadCharacter();
+
+    return choice;
+}
+
+void OperationHistoryManager::showDataOfIncome(Income income)
+{
+    cout << endl << "IncomeID:                 " << income.getId() << endl;
+    cout << "Date:                 " << income.getStringDate() << endl;
+    cout << "Item:          " << income.getItem() << endl;
+    cout << "Amount:               " << setprecision(15) << income.getAmount() << endl;
+}
+
+void OperationHistoryManager::showDataOfExpense(Expense expense)
+{
+    cout << endl << "ExpenseID:                 " << expense.getId() << endl;
+    cout << "Date:                 " << expense.getStringDate() << endl;
+    cout << "Item:          " << expense.getItem() << endl;
+    cout << "Amount:               " << setprecision(15) << expense.getAmount() << endl;
+
 }
 
 void OperationHistoryManager::showCurrentMonthBalance()
@@ -439,49 +484,4 @@ void OperationHistoryManager::displaySearchExpensesAndSum(int numberOfExpenses, 
     cout << "The Sum of Expenses: " << setprecision(15) << expensesSum << endl << endl;
     cout << "TOTAL INCOME IN THE SELECTED PERIOD: " << setprecision(15) << incomesSum + expensesSum;
         cout << endl << endl;
-}
-
-void OperationHistoryManager::showDataOfIncome(Income income)
-{
-    cout << endl << "IncomeID:                 " << income.getId() << endl;
-    cout << "Date:                 " << income.getStringDate() << endl;
-    cout << "Item:          " << income.getItem() << endl;
-    cout << "Amount:               " << setprecision(15) << income.getAmount() << endl;
-}
-
-void OperationHistoryManager::showDataOfExpense(Expense expense)
-{
-    cout << endl << "ExpenseID:                 " << expense.getId() << endl;
-    cout << "Date:                 " << expense.getStringDate() << endl;
-    cout << "Item:          " << expense.getItem() << endl;
-    cout << "Amount:               " << setprecision(15) << expense.getAmount() << endl;
-
-}
-
-char OperationHistoryManager::incomeMenu()
-{
-    char choice;
-
-    cout << "---------------------------" << endl;
-    cout << "1 - Today's income" << endl;
-    cout << "2 - Income from another day" << endl;
-    cout << "3 - Exit " << endl;
-    cout << endl << "Your choice: ";
-    choice = AuxiliaryMethods::loadCharacter();
-
-    return choice;
-}
-
-char OperationHistoryManager::expenceMenu()
-{
-    char choice;
-
-    cout << "---------------------------" << endl;
-    cout << "1 - Today's expense" << endl;
-    cout << "2 - Expense from another day" << endl;
-    cout << "3 - Exit " << endl;
-    cout << endl << "Your choice: ";
-    choice = AuxiliaryMethods::loadCharacter();
-
-    return choice;
 }

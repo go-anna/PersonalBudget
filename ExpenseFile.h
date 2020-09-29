@@ -17,10 +17,9 @@ class ExpenseFile : public XmlFile
 
 public:
     ExpenseFile(string fileName) : XmlFile(fileName){};
-    bool addExpenseToFile(Expense expense);
+    bool saveExpenseToFile(Expense expense);
     vector <Expense> getLastExpenseId(int ID_OF_LOGGED_USER);
     int getIdOfLastExpenseFromFile();
-
 };
 
 #endif

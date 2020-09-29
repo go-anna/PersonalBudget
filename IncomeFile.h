@@ -17,7 +17,7 @@ class IncomeFile : public XmlFile
 
 public:
     IncomeFile(string fileName) : XmlFile(fileName){};
-    bool addIncomeToFile(Income income);
+    bool saveIncomeToFile(Income income);
     vector <Income> getLastIncomeId(int ID_OF_LOGGED_USER);
     int getIdOfLastIncomeFromFile();
 };

@@ -29,18 +29,17 @@ public:
     };
 
     void userRegistration();
-    void userLogin();
-    void userLogout();
+    int userLogin();
+    int userLogout();
     void changeThePasswordOfLoggedInUser();
-    char chooseOptionFromMainMenu();
-    char chooseOptionFromUserMenu();
-    bool checkIfUserIsLoged();
     bool isUserLoggedIn();
     int addIncome();
     int addExpense();
     void showCurrentMonthBalance();
     void showPreviousMonthBalance();
     void showSelectedPeriodBalance();
+    char mainMenu();
+    char userMenu();
 
 };
 

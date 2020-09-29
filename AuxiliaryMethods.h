@@ -13,10 +13,10 @@ class AuxiliaryMethods
 {
 
 public:
-    static double convertStringToDouble(string number);
-    static string convertDoubleToString(double number);
     static string convertIntToString(int number);
     static int convertStringToInt(string number);
+    static double convertStringToDouble(string number);
+    static string convertDoubleToString(double number);
     static int convertDateFromStringToIntWithoutDash(string date);
     static string loadLine();
     static char loadCharacter();

@@ -11,6 +11,28 @@ void UserManager::userRegistration()
     system("pause");
 }
 
+char UserManager::userMenu()
+{
+    char choice;
+
+    system("cls");
+    cout << " >>> USER MENU <<<" << endl;
+    cout << "---------------------------" << endl;
+    cout << "1. Add income" << endl;
+    cout << "2. Add expense" << endl;
+    cout << "3. Balance from the current month" << endl;
+    cout << "4. Balance from the previous month" << endl;
+    cout << "5. Balance from the selected period" << endl;
+    cout << "---------------------------" << endl;
+    cout << "6. change password" << endl;
+    cout << "7. Exit" << endl;
+    cout << "---------------------------" << endl;
+    cout << "Your choice: ";
+    choice = AuxiliaryMethods::loadCharacter();
+
+    return choice;
+}
+
 User UserManager::insertNewUserData()
 {
     User user;
@@ -58,16 +80,19 @@ void UserManager::userLogin()
                 {
                     cout << endl << "Succesful login" << endl << endl;
                     loggedInUserId = itr -> getId();
-                    break;
-
+                    system("pause");
+                    return;
                 }
             }
             cout << "The password was entered incorrectly for 3 times." << endl;
-        break;
+            system("pause");
+            return;
         }
         itr++;
     }
-
+    cout << "There is no user with this login" << endl << endl;
+    system("pause");
+    return;
 }
 
 int UserManager::getNewId()

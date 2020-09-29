@@ -45,5 +45,4 @@ public:
     double getAmount();
 
 };
-
 #endif

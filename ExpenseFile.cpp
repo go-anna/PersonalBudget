@@ -1,6 +1,6 @@
 #include "ExpenseFile.h"
 
-bool ExpenseFile::addExpenseToFile(Expense expense)
+bool ExpenseFile::saveExpenseToFile(Expense expense)
 {
     CMarkup xml;
 
@@ -21,7 +21,6 @@ bool ExpenseFile::addExpenseToFile(Expense expense)
     xml.AddElem( "Date", expense.getStringDate());
     xml.AddElem( "Item", expense.getItem());
     xml.AddElem( "Amount", AuxiliaryMethods::convertDoubleToString(expense.getAmount()));
-
 
     xml.Save(XML_FILE);
     return true;

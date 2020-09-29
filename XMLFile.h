@@ -11,7 +11,7 @@ protected:
     const string XML_FILE;
 
 public:
-    XmlFile(string xmlFile) : XML_FILE(xmlFile) {};
+    XmlFile(string xmlFileName) : XML_FILE(xmlFileName) {};
 };
 
 #endif

@@ -1,6 +1,6 @@
 #include "IncomeFile.h"
 
-bool IncomeFile::addIncomeToFile(Income income)
+bool IncomeFile::saveIncomeToFile(Income income)
 {
     CMarkup xml;
 

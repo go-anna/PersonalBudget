@@ -63,4 +63,3 @@ double OperationHistory::getAmount()
 {
     return amount;
 }
-

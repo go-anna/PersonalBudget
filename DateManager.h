@@ -4,20 +4,21 @@
 #include <iostream>
 #include <time.h>
 #include <string>
+
+#include <iostream>
+#include <windows.h>
+
 #include "AuxiliaryMethods.h"
 
 using namespace std;
 
-class DateManager {
-
+class DateManager
+{
     int getNumberOfMonthDays(int month, int year);
 
 public:
     string getCurrentDate();
-    int getDays(string date);
     bool checkIfDateIsCorrect(string date);
-    bool isLeap(int year);
-
 
 };
 
